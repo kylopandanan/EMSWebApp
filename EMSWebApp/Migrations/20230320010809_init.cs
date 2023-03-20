@@ -45,6 +45,26 @@ namespace EMSWebApp.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "DepartmentId", "DepartmentName" },
+                values: new object[] { 3, "Executives" });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "DepartmentId", "DepartmentName" },
+                values: new object[] { 4, "Construction" });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "DepartmentId", "DepartmentName" },
+                values: new object[] { 5, "Accounting" });
+
+            migrationBuilder.InsertData(
+                table: "Employees",
+                columns: new[] { "Id", "Birthday", "DepartmentId", "Email", "Name", "Phone" },
+                values: new object[] { 2, new DateTime(2023, 3, 21, 9, 8, 9, 594, DateTimeKind.Local).AddTicks(1165), 3, "Jk@gmail.com", "Jhansept Kylo", "0977467872" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Employees_DepartmentId",
                 table: "Employees",

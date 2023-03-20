@@ -37,6 +37,23 @@ namespace EMSWebApp.Migrations
                     b.HasKey("DepartmentId");
 
                     b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            DepartmentId = 3,
+                            DepartmentName = "Executives"
+                        },
+                        new
+                        {
+                            DepartmentId = 4,
+                            DepartmentName = "Construction"
+                        },
+                        new
+                        {
+                            DepartmentId = 5,
+                            DepartmentName = "Accounting"
+                        });
                 });
 
             modelBuilder.Entity("EMSWebApp.Models.Employee", b =>
@@ -70,6 +87,17 @@ namespace EMSWebApp.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            Birthday = new DateTime(2023, 3, 21, 9, 8, 9, 594, DateTimeKind.Local).AddTicks(1165),
+                            DepartmentId = 3,
+                            Email = "Jk@gmail.com",
+                            Name = "Jhansept Kylo",
+                            Phone = "0977467872"
+                        });
                 });
 
             modelBuilder.Entity("EMSWebApp.Models.Employee", b =>

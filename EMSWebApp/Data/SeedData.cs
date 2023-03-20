@@ -14,7 +14,7 @@ namespace EMSWebApp.Data
                 new Department(5, "Accounting")
                 );
             modelBuilder.Entity<Employee>().HasData(
-                new Employee(2, "Jhansept Kylo", DateTime.Now.AddDays(1), "Jk@gmail.com", "0977467872", 1)
+                new Employee(2, "Jhansept Kylo", DateTime.Now.AddDays(1), "Jk@gmail.com", "0977467872", 3)
                 );
         }
     }
