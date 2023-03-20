@@ -14,13 +14,16 @@ namespace EMSWebApp.Models
         [Required(ErrorMessage = "Please Enter Name")]
         [DisplayName("Employee Name")]
         public string Name { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Birthday { get; set; }
         public string Email { get; set; }
         [Display(Name = "Phone Number")]
         public string Phone { get; set; }
         [Display(Name = "Department Name")]
+        [Required(ErrorMessage = "Department Required")]
         public int DepartmentId { get; set; }
         [ValidateNever]
+        [Required(ErrorMessage = "Please Enter Department")]
         public Department Department { get; set; }
 
         /*[NotMapped]
